@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>SpendInk Support</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 20px;
+        color: #333;
+    }
+    h1, h2 {
+        color: #111;
+        margin-top: 24px;
+    }
+    a {
+        color: #0077cc;
+        text-decoration: none;
+    }
+    a:hover {
+        text-decoration: underline;
+    }
+    .header {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        margin-bottom: 20px;
+    }
+</style>
+</head>
+<body>
+
+<div class="header">
+    <img src="app_icon.png" alt="SpendInk Icon" style="height:40px; vertical-align:middle;">
+    <h1 style="margin:0;">SpendInk Support</h1>
+</div>
+
+<p>
+    Welcome to the SpendInk Support page. If you need assistance, have questions, or want to provide feedback, you can reach out in several ways.
+</p>
+
+<h2>Contact Email</h2>
+<p>
+    For direct support, please email us at:  
+    <a href="mailto:infospendink@gmail.com">infospendink@gmail.com</a>
+</p>
+
+<h2>In-App Feedback</h2>
+<p>
+    You can also reach us directly from within the app:<br>
+    <strong>Tools → Feedback</strong><br>
+    This allows you to send feedback or report issues easily from inside SpendInk.
+</p>
+
+<h2>Legal Pages</h2>
+<ul>
+    <li><a href="spendink-privacy-policy.html">Privacy Policy</a></li>
+    <li><a href="spendink-terms-and-conditions.html">Terms & Conditions</a></li>
+</ul>
+
+</body>
+</html>
