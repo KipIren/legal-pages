@@ -1,43 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Privacy Policy - SpendInk Expense Tracker</title>
-<style>
-    body {
-        font-family: Arial, sans-serif;
-        line-height: 1.6;
-        max-width: 900px;
-        margin: 0 auto;
-        padding: 20px;
-        color: #333;
-    }
-    h1, h2, h3 {
-        color: #111;
-        margin-top: 24px;
-    }
-    ul {
-        margin-top: 8px;
-    }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Privacy Policy - SpendInk Expense Tracker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+        }
+        h1, h2, h3 {
+            color: #111;
+            margin-top: 24px;
+        }
+        ul {
+            margin-top: 8px;
+        }
+        .updated {
+            color: #666;
+            font-size: 0.95em;
+        }
+    </style>
 </head>
 <body>
 
 <h1>
-  <img src="app_icon.png" alt="SpendInk Icon" style="height:40px; vertical-align:middle; margin-right:10px;">
-  PRIVACY POLICY FOR SPENDINK EXPENSE TRACKER</h1>
+    <img src="app_icon.png" alt="SpendInk Icon" style="height:40px; vertical-align:middle; margin-right:10px;">
+    PRIVACY POLICY FOR SPENDINK EXPENSE TRACKER</h1>
+
+<p class="updated"><strong>Last Updated:</strong> October 29, 2026</p>
 
 <p>This Privacy Policy explains how SpendInk ("we", "our", or "the app") collects, uses, stores, and protects information when you use our mobile application.</p>
 
 <h2>1. OVERVIEW</h2>
-<p>SpendInk is designed to respect and protect user privacy. The application operates primarily through local device storage and does not require user accounts or cloud-based data storage. We aim to be transparent about how information is handled within the app and through integrated third-party services.</p>
+<p>SpendInk is designed to respect and protect user privacy. Your financial data is stored only on your device. The app does not require a user account, and we do not run servers that store your financial data. A small amount of information is handled by third-party services (advertising, exchange rates, purchases) and, only if you choose to send it, by our feedback form. This policy explains each case.</p>
 
 <h2>2. INFORMATION WE COLLECT</h2>
 
 <h3>2.1 FINANCIAL DATA (STORED LOCALLY ON YOUR DEVICE)</h3>
 <ul>
     <li>Expense and income entries</li>
-    <li>Account balance and related calculations</li>
+    <li>Wallets, account balances and related calculations</li>
     <li>Custom categories</li>
     <li>Savings and budgeting information</li>
     <li>Recurring transaction settings</li>
@@ -50,39 +57,53 @@
     <li>Language selection</li>
     <li>Theme and appearance settings</li>
     <li>Preferred currency</li>
-    <li>Notification settings</li>
+    <li>Notification and reminder settings</li>
     <li>Quick-action configurations</li>
-    <li>Subscription status</li>
+    <li>Subscription (Premium) status</li>
 </ul>
 
 <h3>2.3 SECURITY SETTINGS (STORED LOCALLY ON YOUR DEVICE)</h3>
 <ul>
-    <li>Encrypted passcode data</li>
-    <li>Biometric authentication preferences</li>
+    <li>Your passcode, stored only as a salted one-way hash (the passcode itself is never stored)</li>
+    <li>Whether Face ID / Touch ID unlock is turned on</li>
     <li>App access protection settings</li>
 </ul>
+<p>Face ID and Touch ID are handled entirely by iOS. SpendInk never receives, stores or transmits your biometric data; it only learns whether the check succeeded.</p>
 
-<h3>2.4 INFORMATION COLLECTED BY THIRD PARTIES</h3>
+<h3>2.4 INFORMATION YOU CHOOSE TO SEND US (FEEDBACK)</h3>
+<p>If you use the in-app feedback form, the following is sent to us:</p>
+<ul>
+    <li>Your feedback message</li>
+    <li>Your name (optional)</li>
+    <li>Your email address (optional)</li>
+    <li>The app version</li>
+</ul>
+<p>Feedback is transmitted over a secure (HTTPS) connection and stored using Google services (Google Apps Script). Sending feedback is entirely optional. No financial data is ever included.</p>
+
+<h3>2.5 INFORMATION COLLECTED BY THIRD PARTIES</h3>
 <p>The app uses third-party services that may collect limited information necessary for their functionality.</p>
 
-<p><strong>a) Google Mobile Ads (AdMob)</strong></p>
+<p><strong>a) Google Mobile Ads (AdMob) - free version only</strong></p>
 <ul>
-    <li>Device identifiers</li>
-    <li>General device information</li>
-    <li>Ad performance data</li>
+    <li>Device identifiers (including the advertising identifier, only if you allow tracking)</li>
+    <li>IP address and general device information</li>
+    <li>Ad interaction and performance data</li>
 </ul>
+<p>Ads are shown only in the free version. Premium users see no ads, and no ad data is collected for them.</p>
 <p>Google Privacy Policy: <a href="https://policies.google.com/privacy" target="_blank">https://policies.google.com/privacy</a></p>
 
-<p><strong>b) Exchange Rate API</strong></p>
+<p><strong>b) Exchange Rate API (exchangerate-api.com)</strong></p>
 <ul>
     <li>Currency codes for rate retrieval</li>
+    <li>The technical data that any internet request carries, such as your IP address</li>
 </ul>
-<p>No personally identifiable information is shared.</p>
+<p>No financial data or personally identifiable information from the app is sent.</p>
 
 <p><strong>c) Apple In-App Purchases</strong></p>
 <ul>
     <li>Information required to process transactions</li>
 </ul>
+<p>Purchases are processed entirely by Apple. We never receive your payment details.</p>
 <p>Apple Privacy Policy: <a href="https://www.apple.com/legal/privacy/" target="_blank">https://www.apple.com/legal/privacy/</a></p>
 
 <h2>3. HOW WE USE YOUR INFORMATION</h2>
@@ -90,7 +111,7 @@
 <h3>3.1 FINANCIAL DATA</h3>
 <ul>
     <li>Display and manage financial entries</li>
-    <li>Generate summaries, insights, and analytics</li>
+    <li>Generate summaries, insights, and analytics (calculated on your device)</li>
     <li>Support savings and budgeting features</li>
     <li>Process recurring transactions</li>
     <li>Provide currency conversion functionality</li>
@@ -99,7 +120,7 @@
 <h3>3.2 USER PREFERENCES</h3>
 <ul>
     <li>Customize app appearance and behavior</li>
-    <li>Deliver reminder notifications</li>
+    <li>Deliver reminder notifications (scheduled locally on your device)</li>
     <li>Preserve app settings across updates</li>
 </ul>
 
@@ -109,9 +130,15 @@
     <li>Verify authentication using passcode or biometrics</li>
 </ul>
 
-<h3>3.4 THIRD-PARTY SERVICES</h3>
+<h3>3.4 FEEDBACK</h3>
 <ul>
-    <li>Deliver advertisements</li>
+    <li>Read and respond to your questions, suggestions and bug reports</li>
+    <li>Improve the app</li>
+</ul>
+
+<h3>3.5 THIRD-PARTY SERVICES</h3>
+<ul>
+    <li>Deliver advertisements (free version)</li>
     <li>Retrieve currency exchange information</li>
     <li>Process in-app purchases</li>
 </ul>
@@ -120,23 +147,28 @@
 
 <h3>4.1 LOCAL STORAGE</h3>
 <ul>
-    <li>All financial and preference data is stored on your device</li>
-    <li>Information is saved using secure mechanisms provided by the operating system</li>
+    <li>All financial and preference data is stored in a database on your device</li>
+    <li>The database is protected by iOS data protection and is not readable while your device is locked</li>
     <li>Access protections rely on your device's security features</li>
 </ul>
 
-<h3>4.2 NO CLOUD STORAGE</h3>
+<h3>4.2 NO CLOUD STORAGE BY SPENDINK</h3>
 <ul>
-    <li>We do not maintain servers for storing personal or financial information</li>
-    <li>Data is not uploaded or synced to external services except where required by third-party integrations</li>
+    <li>We do not maintain servers for storing your financial information, and the app does not sync it to any online service</li>
+    <li>Like other app data, your SpendInk data may be included in your device's own iCloud or computer backup, if you have enabled it. These backups are created and managed by Apple under your Apple account settings</li>
 </ul>
 
-<h3>4.3 SECURITY MEASURES</h3>
+<h3>4.3 EXPORTED BACKUP FILES</h3>
+<p>Backup files you export (.sib) are encrypted so they cannot be read as plain text. However, any copy of SpendInk can restore them, so please store and share exported files only with people and places you trust. Exported files never include your passcode or Face ID settings.</p>
+
+<h3>4.4 SECURITY MEASURES</h3>
 <ul>
     <li>Optional passcode protection</li>
-    <li>Optional biometric authentication</li>
+    <li>Optional Face ID / Touch ID authentication</li>
+    <li>App content hidden in the app switcher while passcode protection is on</li>
     <li>OS-level sandboxing and data isolation</li>
-    <li>Secure purchase processing via platform providers</li>
+    <li>Secure purchase processing via Apple</li>
+    <li>Encrypted (HTTPS) connections for all network requests</li>
 </ul>
 
 <h2>5. DATA SHARING AND DISCLOSURE</h2>
@@ -147,13 +179,14 @@
 <h3>5.2 LIMITED SHARING</h3>
 <p>Information shared with third parties is limited to:</p>
 <ul>
-    <li>Advertising and device data for AdMob</li>
+    <li>Advertising and device data for AdMob (free version only)</li>
     <li>Currency codes for exchange rate retrieval</li>
-    <li>Transaction details for in-app purchases</li>
+    <li>Transaction details for in-app purchases (handled by Apple)</li>
+    <li>Feedback you choose to send, stored using Google services</li>
 </ul>
 
 <h3>5.3 LEGAL REQUIREMENTS</h3>
-<p>We may disclose information if required to comply with legal obligations, though the app retains minimal data that could be subject to such requests.</p>
+<p>We may disclose information if required to comply with legal obligations, though we hold very little data that could be subject to such requests (only feedback you have sent us).</p>
 
 <h3>5.4 USER-INITIATED SHARING</h3>
 <p>The app allows you to export your data. Any sharing of exported files is fully controlled by you.</p>
@@ -161,7 +194,7 @@
 <h2>6. YOUR RIGHTS AND CHOICES</h2>
 
 <h3>6.1 ACCESS</h3>
-<p>All information stored in the app is visible and accessible through the app’s interface.</p>
+<p>All information stored in the app is visible and accessible through the app's interface.</p>
 
 <h3>6.2 CORRECTION</h3>
 <p>You may update, edit, or modify your data directly within the app.</p>
@@ -169,18 +202,24 @@
 <h3>6.3 DELETION</h3>
 <ul>
     <li>Delete individual entries</li>
-    <li>Clear data from the app’s settings</li>
+    <li>Delete all data with "Clear all data" in the app (your Premium status is kept so you do not lose your purchase)</li>
     <li>Uninstalling the app removes all locally stored information</li>
+    <li>To delete feedback you have sent us, contact us at the email below</li>
 </ul>
 
 <h3>6.4 EXPORT</h3>
-<p>You may export your data to a file at any time if the feature is available in your version of the app.</p>
+<p>You may export all your data to an encrypted backup file at any time.</p>
 
 <h3>6.5 IMPORT</h3>
 <p>You may restore data from a previously exported file.</p>
 
-<h3>6.6 OPT-OUT OF PERSONALIZED ADS</h3>
-<p>You may limit ad personalization through your device settings.</p>
+<h3>6.6 ADVERTISING AND TRACKING CHOICES</h3>
+<ul>
+    <li><strong>Tracking permission:</strong> iOS asks whether SpendInk may track your activity. If you decline, the advertising identifier is not shared and ads are not personalized based on tracking. You can change this at any time in iOS Settings &gt; Privacy &amp; Security &gt; Tracking.</li>
+    <li><strong>Consent form:</strong> In regions where it is required (such as the European Economic Area, the United Kingdom and Switzerland), Google's consent form asks for your choice before any ad is loaded.</li>
+    <li><strong>Changing your choice:</strong> Where applicable, an "Ad privacy choices" option in the app's settings lets you change your consent at any time.</li>
+    <li><strong>No ads:</strong> Upgrading to Premium removes all ads.</li>
+</ul>
 
 <h3>6.7 BIOMETRIC AND PASSCODE CONTROLS</h3>
 <p>You may enable or disable authentication options at any time.</p>
@@ -188,46 +227,57 @@
 <h2>7. THIRD-PARTY SERVICES AND LINKS</h2>
 
 <h3>7.1 GOOGLE MOBILE ADS (ADMOB)</h3>
-<p>Used for displaying ads within the app.</p>
+<p>Used for displaying ads in the free version of the app.</p>
 <p>Privacy Policy: <a href="https://policies.google.com/privacy" target="_blank">https://policies.google.com/privacy</a><br>
-Ad Settings: <a href="https://adssettings.google.com/" target="_blank">https://adssettings.google.com/</a></p>
+    How Google uses information from apps: <a href="https://policies.google.com/technologies/partner-sites" target="_blank">https://policies.google.com/technologies/partner-sites</a><br>
+    Ad Settings: <a href="https://adssettings.google.com/" target="_blank">https://adssettings.google.com/</a></p>
 
 <h3>7.2 EXCHANGE RATE API</h3>
-<p>Used to retrieve currency conversion rates. No personal information is sent.</p>
+<p>Used to retrieve currency conversion rates from exchangerate-api.com. Only currency codes are sent.</p>
+<p>Privacy Policy: <a href="https://www.exchangerate-api.com/privacy" target="_blank">https://www.exchangerate-api.com/privacy</a></p>
 
-<h3>7.3 EXTERNAL LINKS</h3>
+<h3>7.3 GOOGLE APPS SCRIPT (FEEDBACK)</h3>
+<p>Used to receive and store feedback you choose to send.</p>
+<p>Google Privacy Policy: <a href="https://policies.google.com/privacy" target="_blank">https://policies.google.com/privacy</a></p>
+
+<h3>7.4 APPLE</h3>
+<p>Used for in-app purchases, Face ID / Touch ID, notifications and the App Store rating prompt.</p>
+<p>Apple Privacy Policy: <a href="https://www.apple.com/legal/privacy/" target="_blank">https://www.apple.com/legal/privacy/</a></p>
+
+<h3>7.5 EXTERNAL LINKS</h3>
 <p>External websites may be linked within the app. We are not responsible for their content or privacy practices.</p>
 
-<h2>8. CHILDREN’S PRIVACY</h2>
-<p>The app is not intended for children under the age of 13. We do not knowingly collect information from children. If such information is discovered, it will be deleted.</p>
+<h2>8. CHILDREN'S PRIVACY</h2>
+<p>The app is not intended for children under the age of 13. Its 4+ App Store age rating means the app contains no objectionable content; it does not mean the app is directed at children. We do not knowingly collect information from children. If such information is discovered, it will be deleted.</p>
 
 <h2>9. INTERNATIONAL DATA TRANSFERS</h2>
-<p>Third-party service providers may process data in multiple regions. Their practices comply with applicable data protection laws.</p>
+<p>Third-party service providers (Google, Apple, exchangerate-api.com) may process data in multiple countries, including outside your own. Such processing is governed by their respective privacy policies and safeguards.</p>
 
 <h2>10. DATA RETENTION</h2>
 <ul>
-    <li>Locally stored data remains on your device until deleted</li>
+    <li>Locally stored data remains on your device until you delete it or uninstall the app</li>
+    <li>Feedback is kept only as long as needed to respond to you and improve the app, and is deleted on request</li>
     <li>Third-party retention practices follow their respective policies</li>
 </ul>
 
 <h2>11. PERMISSIONS REQUESTED</h2>
-<p>The app may request permissions such as:</p>
+<p>The app may request the following permissions. Each is optional and requested only when the related feature is used:</p>
 <ul>
-    <li>Access to files for exporting/importing backups</li>
-    <li>Biometric access for authentication</li>
-    <li>Notifications for reminders</li>
-    <li>Network access for ads and exchange rates</li>
+    <li><strong>Face ID:</strong> to unlock the app</li>
+    <li><strong>Notifications:</strong> for reminders</li>
+    <li><strong>Photos / Files:</strong> only when you choose a backup file to restore</li>
+    <li><strong>Tracking (App Tracking Transparency):</strong> for personalized ads in the free version</li>
 </ul>
-<p>Permissions may be managed through your device settings.</p>
+<p>The app also connects to the internet to load ads, retrieve exchange rates, process purchases and send feedback. Permissions may be managed through your device settings.</p>
 
 <h2>12. CHANGES TO THIS PRIVACY POLICY</h2>
-<p>This policy may be updated periodically. The “Last Updated” date will indicate revisions. Continued use of the app following updates constitutes acceptance of the revised policy.</p>
+<p>This policy may be updated periodically. The "Last Updated" date at the top of this page will indicate revisions. Continued use of the app following updates constitutes acceptance of the revised policy.</p>
 
 <h2>13. YOUR CONSENT</h2>
-<p>By using the app, you agree to the terms outlined in this Privacy Policy.</p>
+<p>By using the app, you agree to the terms outlined in this Privacy Policy. Where the law requires your consent (for example for personalized ads), we ask for it separately and you can withdraw it at any time as described in section 6.6.</p>
 
 <h2>14. CONTACT US</h2>
-<p>For questions or concerns regarding this Privacy Policy, contact:</p>
+<p>SpendInk is responsible (the "data controller") for the information described in this policy. For questions, requests or concerns regarding this Privacy Policy, contact:</p>
 <p>Email: <a href="mailto:infospendink@gmail.com">infospendink@gmail.com</a></p>
 
 <h2>15. CALIFORNIA PRIVACY RIGHTS (CCPA)</h2>
@@ -237,19 +287,26 @@ Ad Settings: <a href="https://adssettings.google.com/" target="_blank">https://a
     <li>Deletion of personal information</li>
     <li>Limitation of personal information use</li>
 </ul>
-<p>We do not sell user data.</p>
+<p>We do not sell user data. We will not discriminate against you for exercising these rights.</p>
 
-<h2>16. EUROPEAN UNION USERS (GDPR)</h2>
-<p>EU users have rights including:</p>
+<h2>16. EUROPEAN UNION, UK AND SWISS USERS (GDPR)</h2>
+<p>We process personal data on the following legal bases:</p>
+<ul>
+    <li><strong>Consent:</strong> personalized advertising, and feedback you choose to send</li>
+    <li><strong>Performance of a contract:</strong> processing in-app purchases and providing the app's features, such as exchange rates</li>
+    <li><strong>Legitimate interests:</strong> showing non-personalized ads to keep the free version free, and keeping the app secure</li>
+</ul>
+<p>You have rights including:</p>
 <ul>
     <li>Access</li>
     <li>Rectification</li>
     <li>Erasure</li>
     <li>Restriction of processing</li>
     <li>Data portability</li>
+    <li>Objection to processing</li>
     <li>Withdrawal of consent</li>
 </ul>
-<p>Where applicable, these rights may be exercised directly within the app or by contacting us.</p>
+<p>Where applicable, these rights may be exercised directly within the app or by contacting us. You also have the right to lodge a complaint with your local data protection authority.</p>
 
 </body>
 </html>
