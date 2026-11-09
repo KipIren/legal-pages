@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Splilit · Email confirmed</title>
+<link rel="icon" href="splilit-icon.png">
+<link rel="apple-touch-icon" href="splilit-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F4F7FB;--fg:#1C2B41;--primary:#8496E6;--primary-fg:#FFFFFF;--primary-soft:rgba(132,150,230,.14);--muted-fg:#637388;--card:#FBFCFE;--border:#E8EEF5;--ring:rgba(132,150,230,.5);--shadow:0 14px 32px rgba(28,43,65,.08);--pshadow:0 12px 28px rgba(132,150,230,.4);--warn-soft:#E8DFD5;--warn:#5B4A38;color-scheme:light dark}
+@media (prefers-color-scheme: dark){:root{--bg:#121722;--fg:#E8EDF5;--primary:#95A5EE;--primary-fg:#121722;--primary-soft:rgba(149,165,238,.16);--muted-fg:#93A0B4;--card:#1A2030;--border:#283041;--ring:rgba(149,165,238,.5);--shadow:0 12px 28px rgba(0,0,0,.4);--pshadow:0 12px 28px rgba(149,165,238,.25);--warn-soft:#3A342D;--warn:#E8DFD5}}
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%}
+body{background:var(--bg);color:var(--fg);font-family:'Plus Jakarta Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;-webkit-font-smoothing:antialiased;display:flex;justify-content:center;min-height:100vh;min-height:100dvh;padding:max(64px,env(safe-area-inset-top)) 24px max(32px,env(safe-area-inset-bottom))}
+main{width:100%;max-width:400px;display:flex;flex-direction:column;gap:28px}
+.card{background:var(--card);border:1px solid var(--border);border-radius:32px;box-shadow:var(--shadow);padding:32px 24px;display:flex;flex-direction:column;gap:20px}
+.well{position:relative;width:72px;height:72px}
+.well img{width:72px;height:72px;border-radius:20px;box-shadow:var(--shadow)}
+.badge{position:absolute;inset-inline-end:-8px;bottom:-8px;width:32px;height:32px;border-radius:999px;background:var(--primary);color:var(--primary-fg);border:3px solid var(--card);display:flex;align-items:center;justify-content:center}
+.badge.warn{background:var(--warn-soft);color:var(--warn)}
+.eb{font-size:12px;font-weight:700;letter-spacing:1.6px;text-transform:uppercase;color:var(--muted-fg)}
+h1{margin:6px 0 0;font-size:32px;font-weight:400;letter-spacing:-.8px;line-height:1.15}
+p{margin:0;font-size:15px;font-weight:500;line-height:1.55;color:var(--muted-fg)}
+.btn{height:56px;border-radius:999px;background:var(--primary);color:var(--primary-fg);box-shadow:var(--pshadow);display:flex;align-items:center;justify-content:center;gap:8px;font-size:16px;font-weight:700;text-decoration:none;-webkit-tap-highlight-color:transparent}
+.btn:active{transform:scale(.98)}
+.btn:focus-visible{outline:2px solid var(--ring);outline-offset:3px}
+[dir=rtl] .btn svg{transform:scaleX(-1)}
+[dir=rtl] .eb{letter-spacing:0}
+.hint{display:flex;gap:12px;align-items:flex-start;border-top:1px solid var(--border);padding-top:20px}
+.hint svg{flex:none;color:var(--muted-fg);margin-top:2px}
+.hint p{font-size:13px;line-height:1.5}
+footer{text-align:center}
+footer .eb{font-size:11px;opacity:.7}
+[hidden]{display:none!important}
+</style>
+</head>
+<body>
+<main>
+  <section class="card" aria-live="polite">
+    <div class="well">
+      <img src="splilit-icon.png" alt="">
+      <span class="badge" id="badge">
+        <svg id="ok-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>
+        <svg id="warn-icon" hidden width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true"><path d="M12 7v6M12 17h.01"/></svg>
+      </span>
+    </div>
+    <div>
+      <span class="eb" id="eyebrow"></span>
+      <h1 id="title"></h1>
+    </div>
+    <p id="body"></p>
+    <a class="btn" id="open" href="com.splitapp.splitapp://login-callback">
+      <span id="open-label"></span>
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+    </a>
+    <div class="hint">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M11 18h2"/></svg>
+      <p id="hint"></p>
+    </div>
+  </section>
+
+  <footer><span class="eb">Splilit · <span id="tagline"></span></span></footer>
+</main>
+<script>
+(function () {
+  var T = {
+    en: {ok_eb:"Email confirmed", ok_t:"You're all set", ok_b:"Your Splilit account is ready. Open the app to start splitting costs with your friends.", ex_eb:"Link expired", ex_t:"This link doesn't work anymore", ex_b:"Confirmation links work once and for a limited time. Open Splilit and log in. If your email still needs confirming, you can get a new link there.", open:"Open Splilit", hint:"On a computer? Open Splilit on your phone and log in with this email.", tag:"Shared costs, sorted", doc_ok:"Email confirmed", doc_ex:"Link expired"},
+    es: {ok_eb:"Correo confirmado", ok_t:"Todo listo", ok_b:"Tu cuenta de Splilit está lista. Abre la app para empezar a dividir gastos con tus amigos.", ex_eb:"Enlace caducado", ex_t:"Este enlace ya no funciona", ex_b:"Los enlaces de confirmación se usan una sola vez y por tiempo limitado. Abre Splilit e inicia sesión. Si tu correo aún necesita confirmación, allí puedes pedir un enlace nuevo.", open:"Abrir Splilit", hint:"¿Estás en un ordenador? Abre Splilit en tu móvil e inicia sesión con este correo.", tag:"Gastos compartidos, resueltos", doc_ok:"Correo confirmado", doc_ex:"Enlace caducado"},
+    fr: {ok_eb:"E-mail confirmé", ok_t:"C'est tout bon", ok_b:"Ton compte Splilit est prêt. Ouvre l'app pour commencer à partager les dépenses avec tes amis.", ex_eb:"Lien expiré", ex_t:"Ce lien ne fonctionne plus", ex_b:"Les liens de confirmation ne servent qu'une fois et pour une durée limitée. Ouvre Splilit et connecte-toi. Si ton e-mail doit encore être confirmé, tu pourras y demander un nouveau lien.", open:"Ouvrir Splilit", hint:"Sur un ordinateur ? Ouvre Splilit sur ton téléphone et connecte-toi avec cet e-mail.", tag:"Dépenses partagées, réglées", doc_ok:"E-mail confirmé", doc_ex:"Lien expiré"},
+    de: {ok_eb:"E-Mail bestätigt", ok_t:"Alles bereit", ok_b:"Dein Splilit-Konto ist eingerichtet. Öffne die App und teile Kosten mit deinen Freunden.", ex_eb:"Link abgelaufen", ex_t:"Dieser Link funktioniert nicht mehr", ex_b:"Bestätigungslinks gelten nur einmal und für begrenzte Zeit. Öffne Splilit und melde dich an. Falls deine E-Mail noch bestätigt werden muss, bekommst du dort einen neuen Link.", open:"Splilit öffnen", hint:"Am Computer? Öffne Splilit auf deinem Handy und melde dich mit dieser E-Mail an.", tag:"Geteilte Kosten, geregelt", doc_ok:"E-Mail bestätigt", doc_ex:"Link abgelaufen"},
+    it: {ok_eb:"Email confermata", ok_t:"Tutto pronto", ok_b:"Il tuo account Splilit è pronto. Apri l'app per iniziare a dividere le spese con i tuoi amici.", ex_eb:"Link scaduto", ex_t:"Questo link non funziona più", ex_b:"I link di conferma valgono una sola volta e per un tempo limitato. Apri Splilit e accedi. Se la tua email deve ancora essere confermata, lì puoi ricevere un nuovo link.", open:"Apri Splilit", hint:"Sei al computer? Apri Splilit sul telefono e accedi con questa email.", tag:"Spese condivise, sistemate", doc_ok:"Email confermata", doc_ex:"Link scaduto"},
+    pt: {ok_eb:"E-mail confirmado", ok_t:"Tudo pronto", ok_b:"Sua conta Splilit está pronta. Abra o app para começar a dividir despesas com seus amigos.", ex_eb:"Link expirado", ex_t:"Este link não funciona mais", ex_b:"Os links de confirmação valem uma vez e por tempo limitado. Abra o Splilit e entre. Se seu e-mail ainda precisar de confirmação, você pode receber um novo link lá.", open:"Abrir o Splilit", hint:"Está no computador? Abra o Splilit no celular e entre com este e-mail.", tag:"Despesas divididas, resolvidas", doc_ok:"E-mail confirmado", doc_ex:"Link expirado"},
+    ru: {ok_eb:"Почта подтверждена", ok_t:"Всё готово", ok_b:"Ваш аккаунт Splilit готов. Откройте приложение и делите расходы с друзьями.", ex_eb:"Ссылка устарела", ex_t:"Эта ссылка больше не работает", ex_b:"Ссылка подтверждения работает один раз и ограниченное время. Откройте Splilit и войдите. Если почту ещё нужно подтвердить, там можно получить новую ссылку.", open:"Открыть Splilit", hint:"Вы за компьютером? Откройте Splilit на телефоне и войдите с этой почтой.", tag:"Общие расходы — без хлопот", doc_ok:"Почта подтверждена", doc_ex:"Ссылка устарела"},
+    uk: {ok_eb:"Пошту підтверджено", ok_t:"Усе готово", ok_b:"Ваш акаунт Splilit готовий. Відкрийте застосунок і діліть витрати з друзями.", ex_eb:"Посилання застаріло", ex_t:"Це посилання більше не працює", ex_b:"Посилання підтвердження працює один раз і обмежений час. Відкрийте Splilit і увійдіть. Якщо пошту ще потрібно підтвердити, там можна отримати нове посилання.", open:"Відкрити Splilit", hint:"Ви за комп'ютером? Відкрийте Splilit на телефоні й увійдіть із цією поштою.", tag:"Спільні витрати — без клопоту", doc_ok:"Пошту підтверджено", doc_ex:"Посилання застаріло"},
+    he: {ok_eb:"האימייל אומת", ok_t:"הכול מוכן", ok_b:"החשבון שלך ב-Splilit מוכן. פתחו את האפליקציה כדי להתחיל לחלק הוצאות עם חברים.", ex_eb:"הקישור פג", ex_t:"הקישור הזה כבר לא עובד", ex_b:"קישורי אימות עובדים פעם אחת ולזמן מוגבל. פתחו את Splilit והתחברו. אם האימייל עדיין צריך אימות, אפשר לקבל שם קישור חדש.", open:"פתיחת Splilit", hint:"במחשב? פתחו את Splilit בטלפון והתחברו עם האימייל הזה.", tag:"הוצאות משותפות, מסודרות", doc_ok:"האימייל אומת", doc_ex:"הקישור פג"}
+  };
+  var forced = new URLSearchParams(location.search).get('hl');
+  var langs = (forced ? [forced] : []).concat(navigator.languages || [navigator.language || 'en']);
+  var lang = 'en';
+  for (var i = 0; i < langs.length; i++) {
+    var c = String(langs[i]).slice(0, 2).toLowerCase();
+    if (c === 'iw') c = 'he';
+    if (T[c]) { lang = c; break; }
+  }
+  var t = T[lang];
+  document.documentElement.lang = lang;
+  if (lang === 'he') document.documentElement.dir = 'rtl';
+
+  // Supabase sends errors in the query or the hash (#error=access_denied&error_code=otp_expired…).
+  var params = new URLSearchParams(location.search.slice(1) + '&' + location.hash.slice(1));
+  var failed = params.has('error') || params.has('error_code');
+
+  // Hand whatever Supabase gave us (the ?code= for the app) on to the app.
+  var app = 'com.splitapp.splitapp://login-callback';
+  document.getElementById('open').href = failed ? app : app + location.search + location.hash;
+
+  function set(id, s) { document.getElementById(id).textContent = s; }
+  set('eyebrow', failed ? t.ex_eb : t.ok_eb);
+  set('title', failed ? t.ex_t : t.ok_t);
+  set('body', failed ? t.ex_b : t.ok_b);
+  set('open-label', t.open);
+  set('hint', t.hint);
+  set('tagline', t.tag);
+  document.title = 'Splilit · ' + (failed ? t.doc_ex : t.doc_ok);
+  if (failed) {
+    document.getElementById('badge').classList.add('warn');
+    document.getElementById('ok-icon').setAttribute('hidden', '');
+    document.getElementById('warn-icon').removeAttribute('hidden');
+  }
+})();
+</script>
+</body>
+</html>
